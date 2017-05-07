@@ -38,11 +38,20 @@ int main()
 			printf("一维数组，还用二维的数组指针，这种方式太多余\n");		
 		}
 	}
-	//3.3 p-->int[][]
+	//3.3 p-->int[][x] 
+	//二维数组，哪一个维度是可以省略的呢, 为什么?
 	{
 		int arri[][3] = {{1, 3, 4}, {9, 8, 3}, {9, 0, 9}};
 		arryp *p = arri; //首元素：是一个一维数组{1, 3, 4}	
-
+		int i, j;
+		printf("er wei %d\n", (int)sizeof(arri));
+#if 0		
+		for (i = 0; i < ) {
+			for () {
+			
+			}
+		}
+#endif		
 	}
 	//4.1 p-->char[]
 	char arrc[] = {'a', 'b', 'c'};
