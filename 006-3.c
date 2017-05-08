@@ -45,13 +45,12 @@ int main()
 		arryp *p = arri; //首元素：是一个一维数组{1, 3, 4}	
 		int i, j;
 		printf("er wei %d\n", (int)sizeof(arri));
-#if 0		
-		for (i = 0; i < ) {
-			for () {
-			
+		for (i = 0; i < sizeof(arri)/(sizeof(int)*3); i++) {
+			for (j = 0; j < 3; j++) {
+				printf("%d ", *(*(p + i) + j));	
 			}
 		}
-#endif		
+		printf("\n");
 	}
 	//4.1 p-->char[]
 	char arrc[] = {'a', 'b', 'c'};
