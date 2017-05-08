@@ -52,6 +52,16 @@ int main()
 		}
 		printf("\n");
 	}
+	//3.4 p-->int[][x]中的元素
+	{
+		int arri[][3] = {{1, 3, 4}, {9, 8, 3}, {9, 0, 9}};
+		int *p = arri[0];//或者&arri[0][0]; 但是不能int *p = arri;
+		int i, j;
+		for (i = 0; i < sizeof(arri)/sizeof(arri[0][0]); i++) {
+				printf("%d ", *(p + i));
+		}
+		printf("\n");
+	}
 	//4.1 p-->char[]
 	char arrc[] = {'a', 'b', 'c'};
 	char *parrc = arrc;
