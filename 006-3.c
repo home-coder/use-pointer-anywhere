@@ -80,7 +80,16 @@ int main()
 	char *pabc = "abcdefg";
 	printf("%s\n", pabc + 2);
 
-	//5.
-
+	//5.1 p-->{"hello", "china", "home coder"};
+	{
+		char *str[] = {"hello", "fdjlsa", "oneface"};
+		char *p = str[0];
+		int i;
+		for (i = 0; i < sizeof(str)/sizeof(str[0]); i++) {
+			printf("%s ", p + i);
+		}
+		printf("\n");
+	}	
+	
 	return 0;
 }
