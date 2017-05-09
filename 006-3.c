@@ -51,6 +51,11 @@ int main()
 			}
 		}
 		printf("\n");
+	//重点来了，二维数组指针的用途，比如说我现在仅仅想用这个二维数组的第二行数组，用作输出也好，用作某一个函数的参数也好
+		for (j = 0; j < 3; j++) {
+			printf("%d ", *(*(p + 1) + j));
+		}
+		printf("\n");
 	}
 	//3.4 p-->int[][x]中的元素
 	{
@@ -80,7 +85,7 @@ int main()
 	char *pabc = "abcdefg";
 	printf("%s\n", pabc + 2);
 
-	//5.1 p-->{"hello", "china", "home coder"};
+	//5.1 p-->{"hello", "china", "home coder"}; //本质是一维的数组, 3.4是二维的数组
 	{
 		char *str[] = {"hello", "fdjlsa", "oneface"};
 		char **p = str;
