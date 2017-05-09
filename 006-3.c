@@ -83,10 +83,10 @@ int main()
 	//5.1 p-->{"hello", "china", "home coder"};
 	{
 		char *str[] = {"hello", "fdjlsa", "oneface"};
-		char *p = str[0];
+		char **p = str;
 		int i;
 		for (i = 0; i < sizeof(str)/sizeof(str[0]); i++) {
-			printf("%s ", p + i);
+			printf("%s ", *(p + i));
 		}
 		printf("\n");
 	}	
