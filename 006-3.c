@@ -112,6 +112,16 @@ int main()
 		}
 		printf("\n");
 	}	
+	//5.2 p-->{"hello", "china", "home coder", NULL}. 优化表示字符串数组
+	{
+		char *str[] = {"hello", "fdjlsa", "oneface", NULL};
+		char **pstr = str;
+
+		for (; *pstr != NULL; pstr++) {
+			printf("%s ", *pstr);
+		}
+		printf("\n");
+	}
 	
 	return 0;
 }
