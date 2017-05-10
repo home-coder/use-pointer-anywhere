@@ -14,8 +14,22 @@ int main()
 	}
 
 	{
-		char 
-	
+		char c[] = {'a', 'b', 'c'}; 
+		char *p = c;
+		while (*p) {
+			printf("%c ", *p);
+			p++;
+		}
+		printf("\n");
+	}
+
+	{
+		char *c = "world is coder";
+		while (*c) {
+			printf("%c ", *c);
+			c++;
+		}
+		printf("\n");
 	}
 
 	return 0;
