@@ -14,7 +14,7 @@ int main()
 	}
 
 	{
-		char c[] = {'a', 'b', 'c'}; 
+		char c[] = {'a', 'b', 'c', 'e'}; 
 		char *p = c;
 		while (*p) {
 			printf("%c ", *p);
