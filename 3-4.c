@@ -24,7 +24,7 @@ int main()
 
 //2.parri	
 	parri pa = arri;
-	for (i = 0; i < sizeof(arri)/(sizeof(arri[0][0])*3); i++) {
+	for (i = 0; i < sizeof(arri)/sizeof(arri[0]); i++) {
 		for (j = 0; j < 3; j++) {
 			printf("%d ", *(*(pa + i) + j));
 		}
