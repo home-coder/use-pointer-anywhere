@@ -71,19 +71,36 @@ int main()
 		}
 		printf("\n");
 	}
-	//4.1 p-->char[]
-	char arrc[] = {'a', 'b', 'c'};
-	char *parrc = arrc;
-	int cx = 0;
-	for (; cx < sizeof(arrc)/sizeof(arrc[0]); cx++) {
-		printf("*parrc[%d] =%c\n", cx, *(parrc + cx));
+	//4.1 p-->char[] ；数组大小 3， 无尾零
+	{
+		char arrc[] = {'a', 'b', 'c'};
+		char *parrc = arrc;
+		int cx = 0;
+		for (; cx < sizeof(arrc)/sizeof(arrc[0]); cx++) {
+			printf("*parrc[%d] =%c ", cx, *(parrc + cx));
+		}
+		printf("\n");
+	}
+	//4.2 p-->char[] ; 数组大小是6 + 1，尾零
+	{
+		char arrc[] = "abcdes";
+		printf("%d \n", (int)sizeof(arrc));
+		char *p = arrc;
+		for (; *p != 0; p++) {
+			printf("%c ", *p);
+		}
+		printf("\n");
 	}
 
-	//4.2 p-->char[]
-
 	//4.3 p-->"abc"
-	char *pabc = "abcdefg";
-	printf("%s\n", pabc + 2);
+	{
+		char *pabc = "abcdefg";
+		char *p = pabc;
+		for (; *p != 0; p++) {
+			printf("%c ", *p);
+		}
+		printf("\n");
+	}
 
 	//5.1 p-->{"hello", "china", "home coder"}; //本质是一维的数组, 3.4是二维的数组
 	{
