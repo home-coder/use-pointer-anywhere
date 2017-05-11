@@ -20,6 +20,15 @@ static void print_second2(int (*p)[3], int num)
 	printf("\n");
 }
 
+static void print_second3(int *p, int num)
+{
+	int i;
+	for (i = 0; i < num; i++) {
+		printf("%d ", *(p + i));
+	}
+	printf("\n");
+}
+
 int main()
 {
 	int arri[][3] = {{4, 3, 6}, {4, 3, 2}, {9, 4, 0}};
@@ -45,5 +54,9 @@ int main()
 
 //3.2 use a[1] is ok ?
 	print_second2(&arri[1], 3);
+
+//3.3 use a[1] 数组第一行首元素的地址，来做遍历
+	print_second3(arri[1], 3);
+
 	return 0;
 }
