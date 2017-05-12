@@ -3,7 +3,7 @@
 int main()
 {
 	char *s[] = {"hellods", "home-coder", "linux gnu c", NULL};
-//  char *s[] = {"hellods", "home-coder", "linux gnu c"};
+//  char *s[] = {"hellods", "home-coder", "linux gnu c"};//在使用NULL结束标志来遍历时，会产生段错误
 
 //5.1 遍历字符串数组，里面全是指针	
 	{
