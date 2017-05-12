@@ -3,6 +3,7 @@
 int main()
 {
 	char *s[] = {"hellods", "home-coder", "linux gnu c", NULL};
+//  char *s[] = {"hellods", "home-coder", "linux gnu c"};
 
 //5.1 遍历字符串数组，里面全是指针	
 	{
