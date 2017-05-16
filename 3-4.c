@@ -58,5 +58,26 @@ int main()
 //3.3 use a[1] 数组第一行首元素的地址，来做遍历
 	print_second3(arri[1], 3);
 
+//3.4 在howto 结构体那一个仓库，遇到这样一个问题，声明的数组长度可不可以时变量
+	//.1 len = 3;
+	{
+		int len = 3;
+		typedef int (*par)[len];
+		par ar = arri;
+		for (i = 0; i < 3; i++) {
+			printf("%d ", *(*(ar + 1) + i));
+		}
+		printf("\n");
+	}
+	//.2 sizeof
+	{
+		int len = sizeof(arri[0]);
+		typedef int (*par)[len];
+		par ar = arri;
+		for (i = 0; i < 3; i++) {
+			printf("%d ", *(*(ar + 1) + i));
+		}
+		printf("\n");
+	}
 	return 0;
 }
