@@ -86,5 +86,18 @@ int main()
 		}
 		printf("\n");
 	}
+
+	//.3
+	{
+		int x=7;
+		//int a[x] = {0, 1, 2, 3}; error !
+		int a[x];
+
+		for (i = 0; i < x; i++) {
+			a[i] = i;
+		}
+		printf("a[4] =%d\n", a[4]);
+	}
+
 	return 0;
 }
