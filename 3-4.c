@@ -35,11 +35,18 @@ int main()
 	int *p = arri[0];
 	int i, j;
 
+//通过一维的方式遍历
 	for (i = 0; i < sizeof(arri)/sizeof(arri[0][0]); i++) {
 		printf("%d ", *(p + i));
 	}
 	printf("\n");
-
+//通过二维的方式遍历
+	for (i = 0; i < sizeof(arri)/sizeof(arri[0]); i++) {
+		for (j = 0; j < 3; j++) {
+			printf("%d ", *(p + i*3 +j));
+		}
+	}
+	printf("\n");
 //2.parri	
 	parri pa = arri;
 	for (i = 0; i < sizeof(arri)/sizeof(arri[0]); i++) {
