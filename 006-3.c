@@ -21,7 +21,7 @@ int main()
 	}
 	//3.1 p-->int[]
 	{
-		int arri[10] = {1, 2, 3};
+		int arri[10] = {1, 2, 3};//后面的数据默认初始化为 0
 		int *parri = arri;
 		int ix = 0;
 		for (; ix < sizeof(arri)/sizeof(arri[0]); ix++) {
